@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Cash Register</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Your Cash Register</h1>
+      <label for="bill-amount">BILL AMOUNT</label>
+      <input
+        type="number"
+        id="bill-amount"
+        placeholder="Enter the bill amount"
+      />
+
+      <button id="next-btn">Next</button>
+
+      <div class="cash-given hidden">
+        <label for="cash-amount">CASH GIVEN</label>
+        <input
+          type="number"
+          id="cash-amount"
+          placeholder="Enter the cash given"
+        />
+        <p id="disclaimer"></p>
+      </div>
+
+      <button id="check-btn" class="hidden">Check</button>
+
+      <table>
+        <caption>
+          Balance Amount
+        </caption>
+        <tr>
+          <th>Notes</th>
+          <td>2000</td>
+          <td>500</td>
+          <td>100</td>
+          <td>20</td>
+          <td>10</td>
+          <td>5</td>
+          <td>1</td>
+        </tr>
+        <th>No of Notes</th>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+        <td class="noNotes"></td>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
