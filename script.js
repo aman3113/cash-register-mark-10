@@ -23,15 +23,23 @@ nextBtn.addEventListener("click", function () {
 });
 
 checkBtn.addEventListener("click", function () {
-  if (cashAmount.value < billAmount.value) {
-    let extraAmount = billAmount.value - cashAmount.value;
-    disclaimer.innerText = "Please add atleast " + extraAmount + "Rs";
+  cashValue = Number(cashAmount.value);
+  billVAlue = Number(billAmount.value);
+  let cashToGive = 0;
+
+  if (cashValue < billVAlue) {
+    let extraAmount = billVAlue - cashValue;
+    disclaimer.innerHTML = `
+    <div class = "alert" > 
+    Please add atleast  <span> Rs ${extraAmount} </span>  more.
+    </div>`;
+    cashToGive = extraAmount;
   } else {
-    let cashToGive = cashAmount.value - billAmount.value;
-    for (let i = 0; i < currency.length; i++) {
-      let notes = Math.trunc(cashToGive / currency[i]);
-      cashToGive = cashToGive % currency[i];
-      noNotes[i].innerText = notes;
-    }
+    cashToGive = cashValue - billVAlue;
+  }
+  for (let i = 0; i < currency.length; i++) {
+    let notes = Math.trunc(cashToGive / currency[i]);
+    cashToGive = cashToGive % currency[i];
+    noNotes[i].innerText = notes;
   }
 });
