@@ -8,22 +8,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15vh;
+  background-color: rgb(233, 237, 240);
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 80%;
   max-width: 600px;
   /* border: 2px solid red; */
 }
 
 h1 {
   text-align: center;
-  font-size: 60px;
-  padding: 20px;
   background: rgb(243, 63, 93);
   color: white;
 }
@@ -59,13 +56,6 @@ button:hover {
   font-size: 20px;
 }
 
-label,
-caption {
-  font-size: 30px;
-  font-weight: 600;
-  padding: 20px 5px;
-}
-
 input {
   width: 80%;
   padding: 10px;
@@ -84,9 +74,6 @@ td {
   padding: 5px;
   align-items: center;
 }
-th {
-  padding: 5px;
-}
 
 span {
   font-weight: bold;
@@ -94,4 +81,52 @@ span {
 
 .alert {
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 3vh;
+  }
+  .main-container {
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+    padding: 15px;
+    width: 80vw;
+  }
+
+  label,
+  caption {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 5px;
+  }
+  th {
+    padding: 3px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 15vh;
+  }
+  .main-container {
+    width: 80%;
+  }
+  h1 {
+    font-size: 60px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  label,
+  caption {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 5px;
+  }
+  th {
+    padding: 5px;
+  }
 }
